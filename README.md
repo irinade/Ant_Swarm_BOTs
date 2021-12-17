@@ -44,6 +44,18 @@ I decided to make the food marker by using both the ultrasonic sensor and the zu
 - Battery for zumo (AA) & for nest (9V)
 - 330 Ohm resistor for nest
 
+# Issues :
+
+Installing Arduino IDE on Ubuntu was a real struggle. I had root issues with the port on Arduino Leonardo. I also tried installing multiple versions of Arduino using apt, snap, the Ubuntu application installer, and directly downloading the link from arduino.com. In the end I was successful in installing Arduino, but I still had to reset the Arduino card any time I was compiling a code. I later realized that I would have had none of these issues using Arduino Uno. This process took me approximately an entire day.
+
+Another issue I had was replacing delay() with millis() in my code.
+Millis interferes with magnetometers (delay does not), so to use millis I had to increase the threshold.
+
+For the trail I intended to use a color changing paint such as thermochromic paint and a heater, or a photosensitive paint and a laser. However, after testing both I realise that neither were being detected by the ultrasonic sensor. I also tried seeing if water (wetness) was detected, with no success. I would have needed the trail to be traced with a black marker. However in the end I didn’t have time. 
+
+Another issue I ran into was that for the line following test, the lines I tested using a black marker were too thin for the zumo to pick up for line following. The lines need to be at least 1 cm thick. 
+
+Concerning the IR beacon, I had trouble orientating the receptor to make it unidirectional.
 
 # What's next?
 
