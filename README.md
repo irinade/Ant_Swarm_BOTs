@@ -31,6 +31,20 @@ I decided to make the food marker by using both the ultrasonic sensor and the zu
 
 ![image](https://api.projects.cri-paris.org/api/projects/7qrxPKl2/images/61bc736104e1d685876b49a5)
 
+# Materials
+
+- 2 Arduino Leonardo or UNO & ARduino IDE
+- Zumo bots for the Ant.S 
+    - Use zumo reflectance sensor array to detect the food marker and the “pheromone” trail
+    - Use zumo magnetometer as a compass for orientation
+- IR transmitter (ant nest) & receiver (find the ant nest)
+- 2 Bread boards 
+- 9 male/female cables
+- Ultrasonic sensor to detect object in front of the ants
+- Battery for zumo (AA) & for nest (9V)
+- 330 Ohm resistor for nest
+
+
 # What's next?
 
 I wasn't able to complete all my initial goals due to technical issues and materials not working as expected (talking about the "pheromone" trail), but I am still very pleased of how far I got. I managed to use a zumo bot to implement some foraging behavior, collision detection and avoidance, food searching, and heading home to brink back the food.
@@ -38,3 +52,13 @@ I wasn't able to complete all my initial goals due to technical issues and mater
 The next step would be to look for a material that would work with zumo's reflectance sensor array for line following, in order to leave a TEMPORARY trail behind the Ant.S after it found the food marker. I already worked on the line following script so that would not be hard to implement it to my code.
 
 I also need to build more bots, or to be precise to solder extra pins to other zumo bots in order to add an ultrasonic sensor and an IR receiver.
+
+# References
+
+[Pololulu Zumo Shield for Arduino User’s Guide](https://www.generationrobots.com/media/user-guide-zumo-robot-for-arduino.pdf) ⇒ Zumo related libraries & sensors
+[It Can See; Giving Your Bot Sight!](https://www.intelisecure.com/it-can-see-giving-your-bot-sight/) ⇒ Ultrasonic Sensor
+[Compass Calibration and Sampling](https://www.cs.lafayette.edu/~pfaffmaj/courses/s15/cs106l/zumo_robot_labs/lab04/) ⇒ Magnetometer
+[Turn with compass](https://www.pololu.com/docs/0J57/7.f) ⇒ Magnetometer
+[IR receiver](https://forum.arduino.cc/t/ir-receiver-continuous-signal/391770/5)
+[IR transmitter](https://mschoeffler.com/2021/05/01/arduino-tutorial-ir-transmitter-and-ir-receiver-hx-m121-hx-53-ky-005-ky-022-keyes-iduino-open-smart/)
+
