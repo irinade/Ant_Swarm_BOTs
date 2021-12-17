@@ -7,6 +7,10 @@
  *
  * In loop(), The driving angle then changes its offset by a random value 
  * from -45 to 45 degrees (90 degrees)from the heading every second. 
+ * It also avoid object using an ultrasonic sensor.
+ * It will go look for a food marker using both the ultrasonic sensor
+ * and zumo's reflectance sensor array. Once it found it, it will head home 
+ * using an IR receiver.
  *
  * It is important to note that stray magnetic fields from electric
  * current (including from the Zumo's own motors) and the environment
@@ -48,7 +52,7 @@ uint8_t selectedSensorIndex = 0;
 const int trigPin = 4;
 const int echoPin = 1;
 
-
+// Did it find food?
 int c = 0;
 
 
