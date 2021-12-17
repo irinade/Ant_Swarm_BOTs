@@ -52,6 +52,23 @@ I decided to make the food marker by using both the ultrasonic sensor and the zu
 
 ![image](https://api.projects.cri-paris.org/api/projects/7qrxPKl2/resources/61bca3fab9de1252946b4a15)
 
+# Libraries
+
+for IR transmitter:
+#include <IRremote.h> // >v3.0.0
+
+for ant bots:
+//Libraries for Magnetometer & zumo IR sensors
+#include <Wire.h>
+#include <ZumoShield.h>
+
+//Libraries for Ultrasonic sensor
+#include <ZumoMotors.h>
+#include <Pushbutton.h>
+
+//IR receiver
+#include <IRremote.h>
+
 # Issues :
 
 Installing Arduino IDE on Ubuntu was a real struggle. I had root issues with the port on Arduino Leonardo. I also tried installing multiple versions of Arduino using apt, snap, the Ubuntu application installer, and directly downloading the link from arduino.com. In the end I was successful in installing Arduino, but I still had to reset the Arduino card any time I was compiling a code. I later realized that I would have had none of these issues using Arduino Uno. This process took me approximately an entire day.
