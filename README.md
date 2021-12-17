@@ -29,6 +29,7 @@ I used the zumo's reflectance sensor array to detect the food marker which is co
 
 I decided to make the food marker by using both the ultrasonic sensor and the zumo's reflectance sensor array in order to use the zumo's reflectance sensor array for a future implementation of line following of the "pheromone" trail.
 
+[image](https://api.projects.cri-paris.org/api/projects/7qrxPKl2/images/61bc736104e1d685876b49a5)
 
 # What's next?
 
