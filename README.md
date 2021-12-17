@@ -56,9 +56,14 @@ I also need to build more bots, or to be precise to solder extra pins to other z
 # References
 
 [Pololulu Zumo Shield for Arduino User’s Guide](https://www.generationrobots.com/media/user-guide-zumo-robot-for-arduino.pdf) ⇒ Zumo related libraries & sensors
+
 [It Can See; Giving Your Bot Sight!](https://www.intelisecure.com/it-can-see-giving-your-bot-sight/) ⇒ Ultrasonic Sensor
+
 [Compass Calibration and Sampling](https://www.cs.lafayette.edu/~pfaffmaj/courses/s15/cs106l/zumo_robot_labs/lab04/) ⇒ Magnetometer
+
 [Turn with compass](https://www.pololu.com/docs/0J57/7.f) ⇒ Magnetometer
+
 [IR receiver](https://forum.arduino.cc/t/ir-receiver-continuous-signal/391770/5)
+
 [IR transmitter](https://mschoeffler.com/2021/05/01/arduino-tutorial-ir-transmitter-and-ir-receiver-hx-m121-hx-53-ky-005-ky-022-keyes-iduino-open-smart/)
 
