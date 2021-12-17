@@ -54,20 +54,20 @@ I decided to make the food marker by using both the ultrasonic sensor and the zu
 
 # Libraries
 
-for IR transmitter:
-#include <IRremote.h> // >v3.0.0
+### for IR transmitter:
+- #include <IRremote.h> // >v3.0.0
 
-for ant bots:
+### for ant bots:
 //Libraries for Magnetometer & zumo IR sensors
-#include <Wire.h>
-#include <ZumoShield.h>
+- #include <Wire.h>
+- #include <ZumoShield.h>
 
 //Libraries for Ultrasonic sensor
-#include <ZumoMotors.h>
-#include <Pushbutton.h>
+- #include <ZumoMotors.h>
+- #include <Pushbutton.h>
 
 //IR receiver
-#include <IRremote.h>
+- #include <IRremote.h>
 
 # Issues :
 
