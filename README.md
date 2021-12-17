@@ -1,2 +1,39 @@
 # Ant_Swarm_BOTs
 This interdisciplinary project at the edge of swarm robotics, biomimetism, and odometry is trying to simulate the behavior of worker ants.
+
+# Core Concept
+
+With more than 20,000 species worldwide and a multi continental presence, ants are undeniably a successful genius. These eusocial insects of the family Formicidae appeared in the early Cretaceous and are amazingly diverse. From small colonies of predatory ants that fight for the role of laying queen, to large colonies of millions of coordinated individuals with various castes assigned by birth, ants colonies are often described as super-organisms because the ants appear to operate as a unified entity, collectively working together toward a common goal: support the colony.
+
+# Robotic
+
+This complex organisation has been studied for decades, and inspired the field of swarm robotics.
+
+Even today, robots are built to function on their own. And when we need them to coordinate with one another, we usually tend to use a central intelligence system telling each machine what to do so they don’t interfere with another machine. 
+
+What if we took inspiration from eusocial insects and their collective intelligence to try and make autonomous and independent robots that act collectively as a super-organism?
+
+I decided to focus on this question and to build my own swarm of robots inspired by ants collective social behavior.  
+
+To simulate worker ants foraging behavior, my plan consists of using multiple Zumo bots, and, rather than making them fight, make them work together. The Zumo bots will evolve on a uniformly colored plane (grown). They will leave their home base (ant nest) and forage to search for a marker on the ground (food). Once one individual found the marker (food), just like ants do, they will go back to their nest and leave a pheromone trail behind to inform other ants.
+
+Not all ants use pheromones to communicate with each other. All species of ants rely on eyesight (1,2) and magnetic field (3,4) for orientation. Only large colonies with many castes rely on pheromone trails to communicate interesting places to go to ant-mates. Usually those colonies are composed of sterile, wingless females, most of which are workers (ergates), as well as soldiers (dinergates) and other specialised groups. I initially planned to mimic these types of colony behaviors for my ant bots, however, after encountering issues with the "pheromone" trail, my robots are not able to give information on the position of food marker. So they behave more like small colonies of bull ants, also known as Myrmecia. Bull ants are one of the most primitive group of ants on earth. These workers are omnivorous (generally, worker ants only consumes sweet substance, keeping the protein for the larvae growth) and exhibit greater longevity than other ants. Myrmecia worker ants are also known as gamergate, meaning they are also able to reproduce with male ants, usually fighting for the role of laying queen. Workers are solitary hunters and do not lead other workers to food (no pheromone trail). They rather rely on their excellent vision and earth magnetic field for orientation.
+
+
+# My robot: Ant.S
+
+For my robot's ant orientation in the 3D plane, I decided to use the magnetometer of the Zumo bots as a compass to have the robot move randomly based on the magnetic field. I am also implementing an ultrasonic sensor to give sight to each ant bots for collision detection. An IR receptor is present on the ants to find the home (IR transmitter).
+I soldered to the zumo extra pins so I could connect the ultrasonic sensor Vcc to 5V, Gnd to Gnd, trigpin to 4, and echopin to 1 on the Arduino card. To connect the IR receptor to find the ant nest, I connected the output pin to A0.
+
+I used the zumo's reflectance sensor array to detect the food marker which is composed of both an object surrounded by black ground. So the robots identify the object as food only if it sees both a black line and an object in front of him. After a short pose and time to "eat", he will turn around and start looking for the IR beacon. Once he found the beacon he will start to head home.
+
+I decided to make the food marker by using both the ultrasonic sensor and the zumo's reflectance sensor array in order to use the zumo's reflectance sensor array for a future implementation of line following of the "pheromone" trail.
+
+
+# What's next?
+
+I wasn't able to complete all my initial goals due to technical issues and materials not working as expected (talking about the "pheromone" trail), but I am still very pleased of how far I got. I managed to use a zumo bot to implement some foraging behavior, collision detection and avoidance, food searching, and heading home to brink back the food.
+
+The next step would be to look for a material that would work with zumo's reflectance sensor array for line following, in order to leave a TEMPORARY trail behind the Ant.S after it found the food marker. I already worked on the line following script so that would not be hard to implement it to my code.
+
+I also need to build more bots, or to be precise to solder extra pins to other zumo bots in order to add an ultrasonic sensor and an IR receiver.
