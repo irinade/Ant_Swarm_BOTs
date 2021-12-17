@@ -44,9 +44,13 @@ I decided to make the food marker by using both the ultrasonic sensor and the zu
 - Battery for zumo (AA) & for nest (9V)
 - 330 Ohm resistor for nest
 
-# Schematics of connections
+# Schematics of robots connections with arduino
 
 ![image](https://api.projects.cri-paris.org/api/projects/7qrxPKl2/resources/61bca2db34fd90bcbf6b49cd)
+
+# Schematic of IR transmitter connections
+
+![image](https://api.projects.cri-paris.org/api/projects/7qrxPKl2/resources/61bca3fab9de1252946b4a15)
 
 # Issues :
 
