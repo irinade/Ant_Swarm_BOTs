@@ -52,6 +52,10 @@ I decided to make the food marker by using both the ultrasonic sensor and the zu
 
 ![image](https://api.projects.cri-paris.org/api/projects/7qrxPKl2/resources/61bca3fab9de1252946b4a15)
 
+# Picture of IR transmitter connections
+
+![image](https://lh3.googleusercontent.com/laPzpcLcqePM6kTh_l0EJThHJWkmYxNCjax2r0X1GtQzesYVRepyHHaF9U4J1UuWwhvOPqlgQ0QOQNN8DM36JbfhTXxWw0oyEy0U304HoMwaxr25fPG47PmehnLOfx4_rD1V8p9MNh_DsRnHYsQTE0FhQKRWGyJcOXhdz4wta9pbn-X1jWIsStvHRE9VJ82oEChkwFdMfEASWPCY_40U0lTM_jSMr6ePxBv3MM6R_pEkzMcv5ZJpcWsFT6_tepv2b26d_NsXcfCJ9BZsaXK5fkYg48N821ArBsS-G9i7MtQvf6UyCqmMFbd39cNa11c3RlTUnDIMi0J2plhZNYPJ2JTSs9wrNMZs88WczhIXEKBqmtF_svieLKPLi0WvZrTeCvjZSEStVU0qlmYdTHDaPCJBPfXUVEUD6E1C_279Bg3vzKLWjzCZHJ0abKhEqMVDveTBva5h59zrYWrt3P1vfx2JZvsE6j3Sr5jR7h1acokg6LyaYxJxQmQ-iaHkfqFPybLfKJi4CA2upC3rdurDC0XBBsTwNtJflDvenqr_z1Ek3pUaFZYhvQB3o7G0oC-faH8IQ58UE0-_zCjgkKf_Jn4l5-2-0fgsLL-eGONbmIYsZfGbmaAw6j3TnW2yFK83w8WlSUhkwPI8fcuY-aoluMkVO17JGu9nreyHLK8a9NJ06e2JbTFTBol34E7VFHcKJyeTOFVkwHYA0bdIXA=w1226-h919-no?authuser=0)
+
 # Libraries
 
 ### for IR transmitter:
@@ -77,6 +81,14 @@ Another issue I had was replacing delay() with millis() in my code.
 Millis interferes with magnetometers (delay does not), so to use millis I had to increase the threshold.
 
 For the trail I intended to use a color changing paint such as thermochromic paint and a heater, or a photosensitive paint and a laser. However, after testing both I realise that neither were being detected by the ultrasonic sensor. I also tried seeing if water (wetness) was detected, with no success. I would have needed the trail to be traced with a black marker. However in the end I didn’t have time. 
+
+The issue with photosensitive paint and a laser was that we needed to be in a dark room to see the fluorescence, however it didn't las long at all, and unfortunately because the tons were light on light colours, the IR sensors of the ZUMO bots didn't pick any trail.
+You can see a picture bellow of photosensitive paint in a dark room that has been lighted by a laser after a few seconds.
+![image](https://lh3.googleusercontent.com/XpLYlInvFf9FzNRUCk2vx5K4AgIy5ychKBC1fBbIzf5zuY-uQ15GZKTCTs5vnrAVmCkxDv0E7kC3Jl9ZyBHAaXHEwHKyv_jPiEVJwEPIRqzXK4X3Z6bZ_B72wAdSUs8_NScXWZZIOkQ82DuOapMqOIfAwXzQOLLcfmHhc8woSF8JE8RzkUgnwAgVUSSv5btcY6SzNbJy9lx5tmCfX2vF0oK3m0mvONuZZDAp8UGtSXZZ6Z4o6FCBPK1Yqtgr1htgkgGsTT96KTZQh15Y7fQQugDxeWFiDecDMmhYBl1f6tOwPNgWmSPaqg5hlQOr7ffr6XWa6zLUKnQx3WpJDrLJYf6JXSqgh9bBaYlH79S1OXuoYhnu2weox2bbC2xaeVgqCFkDhs1Moh2VYSjxgKr9om_Zj7zMVkHKIgPfxdZdu2aCaOs89PvjDcrdPmT0XJK7TlLmkfnqEuCYZZTQhJMYPo0ZSZ6X5TBW-QhnreRdhhr7fyqMvAGOpXVSVAXoTqZX7CwxMV3v-7egTA-AnnWfkdsgyqge2K9CteeKh1AgSM1Ee_BHoLTd9_z-LJ3XQVLsGjvmp8NrSZdT4SfvLT9EDCn1-okarTH9T9iyol203933G0oLhLoToMi78VNl_PeWMFG__u2kAtl5xP48i1CIDnXyd4tKIp5n_v49PieCzzHvzVdb5Mmq3RqDs17azXAs0WmwU4Pillisu9dSaw=w706-h919-no?authuser=0)
+
+I also tested to use thermochromic paint and a heat source, with no success. Similarly than with photosensitive paint, thermocromic paint change colours from light tone to a lighter tone, and doesn't work with dark colors paints. I tested to mix thermocromic pigments with white acrylic paint and an acrylic primer, and I also tested with a dark green acrylic paint (I didn't have black). Pigment with white acrylic gave a thermocromic paint with light blue colors that turned white when heated (like you can see on the picture bellow). With dark green paint and pigments, we could not observe any change in color when heated. 
+Furthermore, the colours difference in the case of white acrylic,  is very subtle and doesn't last long enough.
+![image](https://lh3.googleusercontent.com/TaKheJpl0ZF30-HryVXqb1-3Vkq3QSdVAkkyO6mE7SzFTdXjE5G6rPhMOYEMOuF-TvegVxkoAGuFkRVbvZgPKv2t-R0m1ZcOWu2jt_NfZoV5-PYcBFpT0AL8WxhyAdrVn3QTtPRxtSq9g_lOCAEMWDaXfM8p-pGTBEfbhPUH9hvIpqfjxUHlXBSGv0iKjNYYxq14YdHJJr44ZOFnaQswyc7ZrgYWMATmPdWdrK4mQg51QYjqNo7YebDvFFQkmEEClZo22AnuS7OF_8IonXYshWmLNYHsaIOh25HaEQCN0CfHZkQZe7pzBuad1yZU6km2G431HMzz67oQI0jpFHcayL3hgd8wjwS44IKQ8WrG5n2l8V1b_K4FWuSqU8T2vkvhnIDd3wL1lmOm5NRqbnBXap7bbxmv0faorlKUWd_t-E2RH3B9rIk8YH4t8N7vP0rbU2ubfSVfACtEkSjzKf6tiZBTOF5uONsfzXKz7x73MXYHVPQ1y9JuXZlAfb-DedJ9YCuoGb7ZpTYfuxjCVMMV1qN_98InpEIjxSnwM-sfvbmksHMjJd8Dipa2S3efNCWXA6AGD-oQF-_UHsl33OEfd2QlEn7Hk_2AtLGquhf8267UoY7w1vDk4nHEiVwzeNs9HE5UcZvhqulJu69OYFUqwiMUAPuLztpoBFbraRXvW38nWLCv6ubNAqaK5QNxCcJeqoE_dj7GhH7LUadNrQ=w1226-h919-no?authuser=0)
 
 Another issue I ran into was that for the line following test, the lines I tested using a black marker were too thin for the zumo to pick up for line following. The lines need to be at least 1 cm thick. 
 
